@@ -1,0 +1,25 @@
+## Build and Output Folders
+[Bb]in/
+[Oo]bj/
+publish/
+dist/
+
+## Visual Studio & IDEs
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+## Rider & JetBrains
+.idea/
+
+## OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Logs & Diagnostics
+*.log
+*.crash

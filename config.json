@@ -1,0 +1,16 @@
+{
+  "games": [
+    {
+      "name": "Sonic",
+      "path": "D:\\Games\\Sonic\\sonic.exe"
+    },
+    {
+      "name": "Mario",
+      "path": "D:\\Games\\Mario\\mario.exe"
+    },
+    {
+      "name": "Zelda",
+      "path": "D:\\Games\\Zelda\\zelda.exe"
+    }
+  ]
+}

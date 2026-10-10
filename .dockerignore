@@ -1,0 +1,10 @@
+[Bb]in/
+[Oo]bj/
+publish/
+.git/
+.vs/
+.vscode/
+*.user
+*.suo
+README.md
+scripts/

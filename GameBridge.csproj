@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+
+    <!-- Assembly Metadata -->
+    <AssemblyName>GameBridge</AssemblyName>
+    <AssemblyTitle>GameBridge</AssemblyTitle>
+    <Product>GameBridge</Product>
+    <Description>Lightweight Windows game launcher and redirector</Description>
+    <Version>1.0.0</Version>
+    <Authors>aldairrev</Authors>
+  </PropertyGroup>
+
+  <!-- Copy config.json to output and publish directory -->
+  <ItemGroup>
+    <None Update="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
