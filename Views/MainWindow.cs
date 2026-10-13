@@ -175,7 +175,7 @@ public sealed class MainWindow : Form
             SetControlsEnabled(false);
             ShowStatus("[+] Launching game... [WAITING]", Color.Blue, false);
 
-            await _launcherService.LaunchAndTrackAsync(resolvedPath, Hide);
+            await _launcherService.LaunchAndTrackAsync(resolvedPath, Hide, selectedGame.Arguments);
             Close();
         }
         catch (Exception ex)

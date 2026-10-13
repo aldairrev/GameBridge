@@ -43,6 +43,7 @@ public sealed class GameLauncherService
     /// </summary>
     /// <param name="executablePath">Absolute path to the executable.</param>
     /// <param name="onStarted">Callback action invoked once the process successfully starts (to hide the UI).</param>
+    /// <param name="arguments">Optional command-line arguments to pass to the process.</param>
     /// <returns>A task that completes when the game process exits.</returns>
     /// <remarks>
     /// Documented limitation:
@@ -50,7 +51,7 @@ public sealed class GameLauncherService
     /// and immediately exits the parent process, GameBridge will detect the parent exit and close.
     /// To avoid intrusive code injection or kernel hooks, GameBridge strictly tracks the initial process.
     /// </remarks>
-    public async Task LaunchAndTrackAsync(string executablePath, Action onStarted)
+    public async Task LaunchAndTrackAsync(string executablePath, Action onStarted, string? arguments = null)
     {
         string? workingDirectory = Path.GetDirectoryName(executablePath);
         if (string.IsNullOrEmpty(workingDirectory))
@@ -64,6 +65,11 @@ public sealed class GameLauncherService
             WorkingDirectory = workingDirectory,
             UseShellExecute = false
         };
+
+        if (!string.IsNullOrWhiteSpace(arguments))
+        {
+            startInfo.Arguments = arguments;
+        }
 
         using var process = new Process { StartInfo = startInfo };
 

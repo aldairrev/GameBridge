@@ -19,5 +19,11 @@ public sealed class Game
     [JsonPropertyName("path")]
     public string Path { get; set; } = string.Empty;
 
+    /// <summary>
+    /// Optional command-line arguments to pass to the executable.
+    /// </summary>
+    [JsonPropertyName("arguments")]
+    public string? Arguments { get; set; }
+
     public override string ToString() => Name;
 }

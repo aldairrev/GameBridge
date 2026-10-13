@@ -8,6 +8,7 @@ The interface uses **Windows Forms** and the built-in Windows Desktop runtime; A
 
 - Lightweight Windows Forms interface with keyboard navigation.
 - JSON configuration that can be edited without recompiling.
+- Supports optional command-line launch arguments.
 - Tracks the launched process and closes when it exits.
 - Resolves relative game paths against the GameBridge executable directory.
 

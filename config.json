@@ -11,6 +11,11 @@
     {
       "name": "Zelda",
       "path": "D:\\Games\\Zelda\\zelda.exe"
+    },
+    {
+      "name": "Sample Game (With Arguments)",
+      "path": "D:\\Games\\Sample\\game.exe",
+      "arguments": "--fullscreen -profile default"
     }
   ]
 }
